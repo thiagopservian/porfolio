@@ -1,0 +1,156 @@
+{
+    "nav": {
+        "about": "Sobre Mí",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "academic": "Académico",
+        "skills": "Habilidades",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, soy",
+        "name": "Thiago Pacheco",
+        "role": "Ingeniero de Software",
+        "bio": "21 años, graduado de Ingeniería en Software de la Universidad de Buenos Aires — una de solo 3 personas en la historia en graduarse en tiempo récord (la última en lograrlo fue en 1938). Actualmente trabajo como Ingeniero de Datos en Lovelytics. Apasionado por construir soluciones de software innovadoras, desde sistemas distribuidos hasta herramientas potenciadas por IA.",
+        "cta": "Ver Mi Trabajo",
+        "contact": "Contactame"
+    },
+    "experience": {
+        "title": "Experiencia",
+        "subtitle": "Mi recorrido profesional",
+        "items": [
+            {
+                "id": "lovelytics",
+                "company": "Lovelytics",
+                "role": "Ingeniero de Datos",
+                "period": "Diciembre 2025 — Presente",
+                "location": "Estados Unidos (Remoto)",
+                "shortDesc": "Construyendo pipelines de datos y soluciones de ingeniería en una corporación de análisis de datos estadounidense.",
+                "fullDesc": "Trabajo como Ingeniero de Datos en Lovelytics, una corporación estadounidense de análisis de datos. Responsable de diseñar e implementar pipelines de datos escalables, optimizar flujos de trabajo de datos y colaborar con equipos multidisciplinarios para entregar soluciones basadas en datos para clientes empresariales.",
+                "tags": [
+                    "Ingeniería de Datos",
+                    "Cloud",
+                    "Analytics"
+                ]
+            },
+            {
+                "id": "fiubaton",
+                "company": "FIUBAtón 2025",
+                "role": "Ganador — Competencia de Ingeniería",
+                "period": "2025",
+                "location": "Universidad de Buenos Aires",
+                "shortDesc": "Gané la competencia anual de ingeniería, presentando soluciones innovadoras evaluadas por líderes de la industria y figuras públicas.",
+                "fullDesc": "Competí y gané el FIUBAtón 2025, una competencia anual de ingeniería en la Facultad de Ingeniería (FIUBA). Los equipos abordan problemas del mundo real y presentan sus soluciones ante un jurado compuesto por ejecutivos de empresas, políticos, inversores y autoridades nacionales de alto rango. La solución ganadora fue seleccionada por votación del jurado entre todos los equipos participantes.",
+                "tags": [
+                    "Competencia",
+                    "Innovación",
+                    "Ingeniería"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "title": "Proyectos",
+        "subtitle": "Lo que he construido",
+        "viewRepo": "Ver Repositorio",
+        "viewMore": "Más Información",
+        "items": [
+            {
+                "id": "melodia",
+                "title": "Melodía",
+                "shortDesc": "Una recreación completa de Spotify con capacidades potenciadas por IA.",
+                "fullDesc": "Una plataforma de streaming de música integral que recrea todas las funcionalidades principales de Spotify, más dos características adicionales revolucionarias: búsqueda estilo Shazam que identifica canciones mediante tarareo o reproducción de otra canción, y Cover IA — la característica estrella — que permite seleccionar la voz de cualquier cantante y generar un cover de cualquier canción (imaginá a Michael Jackson cantando algo de Queen).",
+                "tags": [
+                    "IA",
+                    "Música",
+                    "Full Stack",
+                    "Machine Learning"
+                ],
+                "repo": "#"
+            },
+            {
+                "id": "vibetrip",
+                "title": "VibeTrip",
+                "shortDesc": "Una recreación de TripAdvisor para descubrir y reseñar destinos de viaje.",
+                "fullDesc": "Una recreación completa de TripAdvisor, con descubrimiento de destinos, reseñas de usuarios, herramientas de planificación de viajes y una interfaz intuitiva para explorar experiencias de viaje en todo el mundo.",
+                "tags": [
+                    "Full Stack",
+                    "Web App",
+                    "Viajes"
+                ],
+                "repo": "#"
+            },
+            {
+                "id": "cassandra-engine",
+                "title": "Motor de Cassandra",
+                "shortDesc": "Un motor de base de datos Cassandra construido desde cero en Rust.",
+                "fullDesc": "Una implementación completa de un motor de base de datos Cassandra construido desde cero en Rust. Implementa todos los protocolos nativos de Cassandra, incluyendo el protocolo binario CQL, protocolo gossip para descubrimiento de nodos y gestión distribuida de datos. Construido para rendimiento y correctitud.",
+                "tags": [
+                    "Rust",
+                    "Bases de Datos",
+                    "Sistemas Distribuidos",
+                    "Bajo Nivel"
+                ],
+                "repo": "#"
+            },
+            {
+                "id": "specforge",
+                "title": "SpecForge",
+                "shortDesc": "Plataforma CLI para testing basado en propiedades potenciado por IA para APIs. (Tesis)",
+                "fullDesc": "Mi proyecto de tesis: una plataforma CLI especializada en Property-Based Testing (PBT) para APIs en cualquier lenguaje de programación. Utiliza LLMs, un parser y buscador de código propio, y un motor de síntesis de esquemas propietario para generar automáticamente tests que encuentran casos borde, vulnerabilidades de seguridad y escenarios de límite de volumen para cualquier endpoint de una API.",
+                "tags": [
+                    "CLI",
+                    "IA/LLM",
+                    "Testing",
+                    "Tesis"
+                ],
+                "repo": "#"
+            }
+        ]
+    },
+    "academic": {
+        "title": "Académico",
+        "subtitle": "Educación y logros",
+        "items": [
+            {
+                "id": "uba",
+                "institution": "Universidad de Buenos Aires (UBA)",
+                "degree": "Ingeniería en Software",
+                "period": "Graduado en tiempo récord",
+                "description": "Tercera persona en toda la historia de la universidad en graduarse en tiempo récord. La última persona en lograr esta hazaña lo hizo en 1938.",
+                "highlight": "Graduación récord — 3ra persona en la historia"
+            },
+            {
+                "id": "olympiad",
+                "institution": "Olimpiada Nacional de Informática",
+                "degree": "2do Puesto — Nivel Nacional",
+                "period": "16 años",
+                "description": "Competí a nivel nacional en la Olimpiada de Informática de Argentina y obtuve el segundo puesto con tan solo 16 años.",
+                "highlight": "2do puesto nacional a los 16 años"
+            },
+            {
+                "id": "pellegrini",
+                "institution": "Escuela Superior de Comercio Carlos Pellegrini",
+                "degree": "Educación Secundaria",
+                "period": "Graduado",
+                "description": "Graduado de una de las escuelas secundarias más prestigiosas y reconocidas a nivel nacional en Argentina.",
+                "highlight": "Institución de prestigio nacional"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Habilidades",
+        "subtitle": "Tecnologías y herramientas con las que trabajo",
+        "categories": {
+            "languages": "Lenguajes",
+            "frameworks": "Frameworks y Librerías",
+            "tools": "Herramientas y Plataformas",
+            "databases": "Bases de Datos",
+            "concepts": "Conceptos"
+        }
+    },
+    "footer": {
+        "copyright": "© 2025 Thiago Pacheco. Todos los derechos reservados.",
+        "madeWith": "Hecho con React"
+    }
+}

@@ -1,0 +1,114 @@
+.academic {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.academic-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.academic-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 15px var(--accent-glow-raw);
+}
+
+.academic-card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.academic-card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.academic-highlight {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    background: var(--accent-glow);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(0, 230, 118, 0.15);
+}
+
+.academic-institution {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.academic-degree {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.academic-period {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.academic-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.academic-media-slot {
+    margin-top: auto;
+}
+
+.media-placeholder-sm {
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0.5;
+}
+
+.media-placeholder-sm span {
+    font-size: 1rem;
+}
+
+.media-placeholder-sm p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .academic-grid {
+        grid-template-columns: 1fr;
+    }
+}

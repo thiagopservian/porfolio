@@ -1,0 +1,156 @@
+{
+    "nav": {
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "academic": "Academic",
+        "skills": "Skills",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hello, I'm",
+        "name": "Thiago Pacheco",
+        "role": "Software Engineer",
+        "bio": "21 years old, Software Engineering graduate from Universidad de Buenos Aires — one of only 3 people in history to graduate in record time (the last to achieve this was in 1938). Currently working as a Data Engineer at Lovelytics. Passionate about building innovative software solutions, from distributed systems to AI-powered tools.",
+        "cta": "View My Work",
+        "contact": "Get in Touch"
+    },
+    "experience": {
+        "title": "Experience",
+        "subtitle": "My professional journey",
+        "items": [
+            {
+                "id": "lovelytics",
+                "company": "Lovelytics",
+                "role": "Data Engineer",
+                "period": "December 2025 — Present",
+                "location": "United States (Remote)",
+                "shortDesc": "Building data pipelines and engineering solutions at a US-based data analytics corporation.",
+                "fullDesc": "Working as a Data Engineer at Lovelytics, a US-based data analytics corporation. Responsible for designing and implementing scalable data pipelines, optimizing data workflows, and collaborating with cross-functional teams to deliver data-driven solutions for enterprise clients.",
+                "tags": [
+                    "Data Engineering",
+                    "Cloud",
+                    "Analytics"
+                ]
+            },
+            {
+                "id": "fiubaton",
+                "company": "FIUBAtón 2025",
+                "role": "Winner — Engineering Competition",
+                "period": "2025",
+                "location": "Universidad de Buenos Aires",
+                "shortDesc": "Won the annual engineering competition, presenting innovative solutions evaluated by industry leaders and public figures.",
+                "fullDesc": "Competed and won FIUBAtón 2025, an annual engineering competition at the Faculty of Engineering (FIUBA). Teams tackle real-world problems and present their solutions to a jury composed of company executives, politicians, investors, and national authorities. The winning solution was selected by jury vote among all competing teams.",
+                "tags": [
+                    "Competition",
+                    "Innovation",
+                    "Engineering"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "subtitle": "Things I've built",
+        "viewRepo": "View Repository",
+        "viewMore": "Learn More",
+        "items": [
+            {
+                "id": "melodia",
+                "title": "Melodía",
+                "shortDesc": "A full-featured Spotify recreation with AI-powered capabilities.",
+                "fullDesc": "A comprehensive music streaming platform recreating all of Spotify's core functionalities, plus two groundbreaking additional features: a Shazam-style search that identifies songs through humming or playing another song, and AI Cover — the standout feature — which lets users select any singer's voice and generate a cover of any song (imagine Michael Jackson singing a Queen track).",
+                "tags": [
+                    "AI",
+                    "Music",
+                    "Full Stack",
+                    "Machine Learning"
+                ],
+                "repo": "#"
+            },
+            {
+                "id": "vibetrip",
+                "title": "VibeTrip",
+                "shortDesc": "A TripAdvisor recreation for discovering and reviewing travel destinations.",
+                "fullDesc": "A complete recreation of TripAdvisor, featuring destination discovery, user reviews, trip planning tools, and an intuitive interface for exploring travel experiences worldwide.",
+                "tags": [
+                    "Full Stack",
+                    "Web App",
+                    "Travel"
+                ],
+                "repo": "#"
+            },
+            {
+                "id": "cassandra-engine",
+                "title": "Cassandra Engine",
+                "shortDesc": "A Cassandra database engine built from scratch in Rust.",
+                "fullDesc": "A complete implementation of a Cassandra database engine built from the ground up in Rust. Implements all of Cassandra's native protocols, including the CQL binary protocol, gossip protocol for node discovery, and distributed data management. Built for performance and correctness.",
+                "tags": [
+                    "Rust",
+                    "Databases",
+                    "Distributed Systems",
+                    "Low-Level"
+                ],
+                "repo": "#"
+            },
+            {
+                "id": "specforge",
+                "title": "SpecForge",
+                "shortDesc": "CLI platform for AI-powered Property-Based Testing of APIs. (Thesis)",
+                "fullDesc": "My thesis project: a CLI platform specialized in Property-Based Testing (PBT) for APIs in any programming language. Leverages LLMs, a custom code parser and searcher, and a proprietary schema synthesis engine to automatically generate tests that find edge cases, security vulnerabilities, and volume limit scenarios for any API endpoint.",
+                "tags": [
+                    "CLI",
+                    "AI/LLM",
+                    "Testing",
+                    "Thesis"
+                ],
+                "repo": "#"
+            }
+        ]
+    },
+    "academic": {
+        "title": "Academic",
+        "subtitle": "Education & achievements",
+        "items": [
+            {
+                "id": "uba",
+                "institution": "Universidad de Buenos Aires (UBA)",
+                "degree": "Software Engineering",
+                "period": "Graduated in record time",
+                "description": "Third person in the entire history of the university to graduate in record time. The last person to achieve this feat did so in 1938.",
+                "highlight": "Record graduation — 3rd person in history"
+            },
+            {
+                "id": "olympiad",
+                "institution": "National Informatics Olympiad",
+                "degree": "2nd Place — National Level",
+                "period": "Age 16",
+                "description": "Competed at the national level in Argentina's Informatics Olympiad and secured second place at just 16 years old.",
+                "highlight": "2nd place nationally at age 16"
+            },
+            {
+                "id": "pellegrini",
+                "institution": "Escuela Superior de Comercio Carlos Pellegrini",
+                "degree": "Secondary Education",
+                "period": "Graduated",
+                "description": "Graduated from one of the most prestigious and nationally recognized secondary schools in Argentina.",
+                "highlight": "Nationally prestigious institution"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Skills",
+        "subtitle": "Technologies & tools I work with",
+        "categories": {
+            "languages": "Languages",
+            "frameworks": "Frameworks & Libraries",
+            "tools": "Tools & Platforms",
+            "databases": "Databases",
+            "concepts": "Concepts"
+        }
+    },
+    "footer": {
+        "copyright": "© 2025 Thiago Pacheco. All rights reserved.",
+        "madeWith": "Built with React"
+    }
+}
