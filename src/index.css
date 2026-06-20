@@ -20,10 +20,10 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #a9aeb3;
-  --bg-primary-alpha: rgba(169, 174, 179, 0.85);
-  --bg-secondary: #999fa4;
-  --bg-card: #bcc1c5;
+  --bg-primary: #babec2;
+  --bg-primary-alpha: rgba(186, 190, 194, 0.85);
+  --bg-secondary: #aaafb3;
+  --bg-card: #cccfd2;
   --accent: #00913c;
   --accent-hover: #007a33;
   --accent-glow: rgba(0, 145, 60, 0.1);

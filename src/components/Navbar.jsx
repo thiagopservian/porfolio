@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { useLang } from '../context/LangContext';
+import logo from '../assets/logo.png';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -10,7 +11,7 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('about');
 
-    const sections = ['about', 'experience', 'projects', 'academic', 'skills'];
+    const sections = ['about', 'journey', 'projects', 'skills'];
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -47,7 +48,7 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-inner">
                 <button className="navbar-logo" onClick={() => scrollTo('about')}>
-                    TP<span className="accent">.</span>
+                    <img src={logo} alt="Thiago Pacheco" className="navbar-logo-img" />
                 </button>
 
                 <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>

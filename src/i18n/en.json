@@ -1,11 +1,16 @@
 {
     "nav": {
         "about": "About",
+        "journey": "Journey",
         "experience": "Experience",
         "projects": "Projects",
         "academic": "Academic",
         "skills": "Skills",
         "contact": "Contact"
+    },
+    "journey": {
+        "title": "Experience & Education",
+        "subtitle": "My professional and academic path"
     },
     "hero": {
         "greeting": "Hello, I'm",

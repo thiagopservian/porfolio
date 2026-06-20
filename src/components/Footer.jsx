@@ -1,5 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { SiReact } from 'react-icons/si';
+import logo from '../assets/logo.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -10,7 +11,7 @@ export default function Footer() {
             <div className="footer-inner">
                 <div className="footer-top">
                     <div className="footer-brand">
-                        <span className="footer-logo">TP<span className="accent">.</span></span>
+                        <span className="footer-logo"><img src={logo} alt="Thiago Pacheco" className="footer-logo-img" /></span>
                         <p className="footer-tagline">{t('hero.role')}</p>
                     </div>
                     <div className="footer-socials">

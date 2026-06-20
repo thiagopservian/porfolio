@@ -153,15 +153,16 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .hero-video {
-    height: 580px;
+    height: 680px;
     width: auto;
     max-width: 100%;
     display: block;
     cursor: pointer;
+    transform: translateY(-4.5rem);
     filter: drop-shadow(0 24px 50px rgba(0, 0, 0, 0.35));
 }
 
@@ -226,7 +227,8 @@
     }
 
     .hero-video {
-        height: 400px;
+        height: 460px;
+        transform: translateY(-1.5rem);
     }
 
     .hero-bg-glow {

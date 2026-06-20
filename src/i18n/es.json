@@ -1,11 +1,16 @@
 {
     "nav": {
         "about": "Sobre Mí",
+        "journey": "Trayectoria",
         "experience": "Experiencia",
         "projects": "Proyectos",
         "academic": "Académico",
         "skills": "Habilidades",
         "contact": "Contacto"
+    },
+    "journey": {
+        "title": "Experiencia y Formación",
+        "subtitle": "Mi trayectoria profesional y académica"
     },
     "hero": {
         "greeting": "Hola, soy",

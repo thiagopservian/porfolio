@@ -25,37 +25,153 @@
 /* Timeline */
 .timeline {
     position: relative;
-    max-width: 900px;
+    max-width: 1040px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 4.5rem 0 2rem;
 }
 
-.timeline-line {
+/* Dos ejes verticales: académico (izquierda) y laboral (derecha) */
+.timeline-axis {
     position: absolute;
-    left: 50%;
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, transparent, var(--accent), var(--accent), transparent);
-    transform: translateX(-50%);
 }
 
+.timeline-axis::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, var(--accent), var(--accent), transparent);
+    transition: opacity 0.45s ease;
+}
+
+.timeline-axis.line-academic {
+    left: 4%;
+}
+
+.timeline-axis.line-work {
+    left: 96%;
+}
+
+.timeline-axis.line-work::before {
+    background: linear-gradient(to bottom, transparent, var(--work-color), var(--work-color), transparent);
+}
+
+[data-theme="light"] .timeline-axis.line-work::before {
+    background: linear-gradient(to bottom, transparent, #000, #000, transparent);
+}
+
+.timeline-axis-label {
+    position: absolute;
+    top: 0.5rem;
+    white-space: nowrap;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    background: var(--bg-primary);
+    padding: 0.25rem 0.7rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+    z-index: 3;
+}
+
+.timeline-axis-label:hover {
+    box-shadow: 0 0 12px var(--accent-glow-raw);
+}
+
+/* Timeline colapsada: la línea (gradiente) se desvanece, queda solo el botón */
+.timeline-axis.line-hidden::before {
+    opacity: 0;
+}
+
+.timeline-axis-label.is-collapsed {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+}
+
+.line-work .timeline-axis-label.is-collapsed {
+    background: var(--work-color);
+    color: var(--bg-primary);
+    border-color: var(--work-color);
+}
+
+[data-theme="light"] .line-work .timeline-axis-label.is-collapsed {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.line-academic .timeline-axis-label {
+    left: 0;
+}
+
+.line-work .timeline-axis-label {
+    right: 0;
+    color: var(--work-color);
+    border-color: var(--work-color);
+}
+
+[data-theme="light"] .line-work .timeline-axis-label {
+    color: #000;
+    border-color: #000;
+}
+
+/* Una sola columna central de tarjetas, apiladas una sobre otra */
 .timeline-item {
     position: relative;
-    width: 50%;
-    padding: 1rem 2.5rem;
+    width: 100%;
+    margin: 0 0 2.5rem;
+    max-height: 650px;
     cursor: pointer;
-    margin-bottom: 2rem;
-}
-
-.timeline-item.left {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item.right {
-    left: 50%;
     text-align: left;
+    overflow: visible;
+    transition: max-height 0.45s ease, opacity 0.35s ease, margin 0.45s ease,
+        transform 0.45s ease, overflow 0s 0.45s;
+}
+
+/* Estado colapsado: se anima alto/opacidad/margen y el resto reflueye */
+.timeline-item.collapsed {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.45s ease, opacity 0.3s ease, margin 0.45s ease,
+        transform 0.45s ease, overflow 0s 0s;
+}
+
+/* Conector horizontal desde la tarjeta hasta su eje */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: calc(2rem + 8px);
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.timeline-item.cat-academic::before {
+    left: 4%;
+    width: 4%;
+}
+
+.timeline-item.cat-work::before {
+    left: 92%;
+    width: 4%;
+    background: var(--work-color);
+}
+
+[data-theme="light"] .timeline-item.cat-work::before {
+    background: #000;
 }
 
 .timeline-dot {
@@ -67,18 +183,32 @@
     background: var(--bg-primary);
     border: 2px solid var(--accent);
     z-index: 2;
+    margin-left: -9px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
 
-.timeline-item.left .timeline-dot {
-    right: -9px;
+.timeline-item.cat-academic .timeline-dot {
+    left: 4%;
 }
 
-.timeline-item.right .timeline-dot {
-    left: -9px;
+.timeline-item.cat-work .timeline-dot {
+    left: 96%;
+    border-color: var(--work-color);
+}
+
+.timeline-item.cat-work .timeline-dot-inner {
+    background: var(--work-color);
+}
+
+[data-theme="light"] .timeline-item.cat-work .timeline-dot {
+    border-color: #000;
+}
+
+[data-theme="light"] .timeline-item.cat-work .timeline-dot-inner {
+    background: #000;
 }
 
 .timeline-dot-inner {
@@ -95,11 +225,26 @@
 }
 
 .timeline-card {
+    position: relative;
+    z-index: 1;
+    width: 54%;
+    margin: 0;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s ease;
+}
+
+/* Tarjetas pegadas a su eje (escalonadas, no alineadas) */
+.timeline-item.cat-academic .timeline-card {
+    margin-left: 8%;
+    margin-right: auto;
+}
+
+.timeline-item.cat-work .timeline-card {
+    margin-left: auto;
+    margin-right: 8%;
 }
 
 .timeline-item:hover .timeline-card {
@@ -144,7 +289,30 @@
     text-align: left;
 }
 
+.timeline-cat-label {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    margin-bottom: 0.6rem;
+}
+
+.timeline-cat-label.cat-work {
+    background: var(--work-color);
+    color: var(--bg-card);
+}
+
+.timeline-cat-label.cat-academic {
+    background: var(--accent-glow);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
 .timeline-period {
+    display: block;
     font-size: 0.75rem;
     color: var(--accent);
     font-weight: 600;
@@ -206,6 +374,40 @@
 
 .timeline-read-more:hover {
     gap: 0.7rem;
+}
+
+/* === Lado Experiencia (laboral): verde distinto al académico (oscuro) / negro (claro) === */
+.timeline {
+    --work-color: #4e8c2a;
+}
+
+[data-theme="light"] .timeline {
+    --work-color: #000;
+}
+
+.timeline-item.cat-work .timeline-period,
+.timeline-item.cat-work .timeline-read-more,
+.timeline-item.cat-work .timeline-img-placeholder span {
+    color: var(--work-color);
+}
+
+.timeline-item.cat-work .timeline-img-placeholder::before {
+    background: none;
+}
+
+.timeline-item.cat-work .tag {
+    color: var(--work-color);
+    background: color-mix(in srgb, var(--work-color) 14%, transparent);
+    border-color: color-mix(in srgb, var(--work-color) 32%, transparent);
+}
+
+.timeline-item.cat-work:hover .timeline-card {
+    border-color: var(--work-color);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item.cat-work:hover .timeline-dot {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--work-color) 45%, transparent);
 }
 
 /* Modal */
@@ -358,28 +560,45 @@
     margin-bottom: 0.5rem;
 }
 
-/* Mobile Timeline */
+/* Mobile Timeline — un solo eje a la izquierda */
 @media (max-width: 768px) {
-    .timeline-line {
+    .timeline {
+        padding-top: 2rem;
+    }
+
+    .timeline-axis.line-academic {
         left: 20px;
     }
 
-    .timeline-item {
+    .timeline-axis.line-work {
+        display: none;
+    }
+
+    .timeline-axis-label {
+        display: none;
+    }
+
+    .timeline-item,
+    .timeline-item.cat-academic,
+    .timeline-item.cat-work {
         width: 100%;
-        padding-left: 50px;
-        padding-right: 0;
         text-align: left;
     }
 
-    .timeline-item.left,
-    .timeline-item.right {
-        left: 0;
-        text-align: left;
+    .timeline-item::before {
+        display: none;
     }
 
-    .timeline-item.left .timeline-dot,
-    .timeline-item.right .timeline-dot {
-        left: 11px;
+    .timeline-card,
+    .timeline-item.cat-academic .timeline-card,
+    .timeline-item.cat-work .timeline-card {
+        width: auto;
+        margin: 0 0 0 50px;
+    }
+
+    .timeline-item.cat-academic .timeline-dot,
+    .timeline-item.cat-work .timeline-dot {
+        left: 20px;
         right: auto;
     }
 

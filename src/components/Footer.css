@@ -21,6 +21,14 @@
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-logo-img {
+    height: 64px;
+    width: auto;
+    display: block;
 }
 
 .footer-tagline {
