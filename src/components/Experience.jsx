@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLang } from '../context/LangContext';
+import { FiImage } from 'react-icons/fi';
 import './Experience.css';
 
 export default function Experience() {
@@ -81,7 +82,7 @@ export default function Experience() {
                         </div>
                         <div className="exp-modal-media">
                             <div className="media-placeholder">
-                                <span>📷</span>
+                                <span><FiImage /></span>
                                 <p>Media placeholder — add images or videos here</p>
                             </div>
                         </div>

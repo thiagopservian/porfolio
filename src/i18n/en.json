@@ -11,13 +11,13 @@
         "greeting": "Hello, I'm",
         "name": "Thiago Pacheco",
         "role": "Software Engineer",
-        "bio": "21 years old, Software Engineering graduate from Universidad de Buenos Aires — one of only 3 people in history to graduate in record time (the last to achieve this was in 1938). Currently working as a Data Engineer at Lovelytics. Passionate about building innovative software solutions, from distributed systems to AI-powered tools.",
+        "bio": "At 21, I am a Software Engineering graduate from the University of Buenos Aires, holding the distinction of being one of only three individuals in the institution's history to complete the degree in record time—a milestone untouched since 1938. As a Junior Data Engineer at Lovelytics, I channel my passion into architecting robust software solutions, thriving at the intersection of complex distributed systems and cutting-edge AI technologies.",
         "cta": "View My Work",
         "contact": "Get in Touch"
     },
     "experience": {
         "title": "Experience",
-        "subtitle": "My professional journey",
+        "subtitle": "My Professional Trajectory",
         "items": [
             {
                 "id": "lovelytics",
@@ -25,8 +25,8 @@
                 "role": "Data Engineer",
                 "period": "December 2025 — Present",
                 "location": "United States (Remote)",
-                "shortDesc": "Building data pipelines and engineering solutions at a US-based data analytics corporation.",
-                "fullDesc": "Working as a Data Engineer at Lovelytics, a US-based data analytics corporation. Responsible for designing and implementing scalable data pipelines, optimizing data workflows, and collaborating with cross-functional teams to deliver data-driven solutions for enterprise clients.",
+                "shortDesc": "Architecting scalable data pipelines and driving enterprise-level engineering solutions at a premier US-based analytics firm.",
+                "fullDesc": "As a Junior Data Engineer at Lovelytics, a prominent US-based analytics corporation, I specialize in designing and deploying highly scalable data pipelines. I focus on optimizing complex data workflows and collaborating with cross-functional teams to deliver sophisticated, data-driven solutions that empower enterprise clients.",
                 "tags": [
                     "Data Engineering",
                     "Cloud",
@@ -39,8 +39,8 @@
                 "role": "Winner — Engineering Competition",
                 "period": "2025",
                 "location": "Universidad de Buenos Aires",
-                "shortDesc": "Won the annual engineering competition, presenting innovative solutions evaluated by industry leaders and public figures.",
-                "fullDesc": "Competed and won FIUBAtón 2025, an annual engineering competition at the Faculty of Engineering (FIUBA). Teams tackle real-world problems and present their solutions to a jury composed of company executives, politicians, investors, and national authorities. The winning solution was selected by jury vote among all competing teams.",
+                "shortDesc": "Champion of the faculty's premier engineering hackathon, delivering a winning tech solution validated by industry executives and government officials.",
+                "fullDesc": "First-place winner at FIUBAtón 2025, the flagship engineering competition hosted by the Faculty of Engineering (FIUBA). Leading a collaborative team, we engineered an innovative solution to a high-stakes, real-world challenge. Our project secured the winning vote from a distinguished panel of corporate executives, investors, and high-ranking national authorities.",
                 "tags": [
                     "Competition",
                     "Innovation",
@@ -51,15 +51,15 @@
     },
     "projects": {
         "title": "Projects",
-        "subtitle": "Things I've built",
+        "subtitle": "Featured Engineering Projects",
         "viewRepo": "View Repository",
         "viewMore": "Learn More",
         "items": [
             {
                 "id": "melodia",
                 "title": "Melodía",
-                "shortDesc": "A full-featured Spotify recreation with AI-powered capabilities.",
-                "fullDesc": "A comprehensive music streaming platform recreating all of Spotify's core functionalities, plus two groundbreaking additional features: a Shazam-style search that identifies songs through humming or playing another song, and AI Cover — the standout feature — which lets users select any singer's voice and generate a cover of any song (imagine Michael Jackson singing a Queen track).",
+                "shortDesc": "A highly advanced, full-stack music streaming platform engineered with a seamless UI and groundbreaking AI capabilities.",
+                "fullDesc": "An ambitious, full-stack recreation of Spotify that matches its core streaming infrastructure while introducing two disruptive features. It boasts an advanced audio-recognition engine (Shazam-style) capable of identifying tracks via humming or ambient playback. Furthermore, it integrates a real-time 'AI Cover' engine, allowing users to seamlessly map any artist's vocal model onto any track—effortlessly engineering crossovers like Michael Jackson performing a Queen anthem.",
                 "tags": [
                     "AI",
                     "Music",
@@ -71,8 +71,8 @@
             {
                 "id": "vibetrip",
                 "title": "VibeTrip",
-                "shortDesc": "A TripAdvisor recreation for discovering and reviewing travel destinations.",
-                "fullDesc": "A complete recreation of TripAdvisor, featuring destination discovery, user reviews, trip planning tools, and an intuitive interface for exploring travel experiences worldwide.",
+                "shortDesc": "A comprehensive, full-stack travel discovery ecosystem modeled after TripAdvisor.",
+                "fullDesc": "A robust, full-stack platform inspired by TripAdvisor, engineered to facilitate global travel discovery. It features a seamless UI/UX for destination exploration, dynamic user-generated reviews, and interactive trip-planning tools, all backed by a highly optimized database architecture.",
                 "tags": [
                     "Full Stack",
                     "Web App",
@@ -83,8 +83,8 @@
             {
                 "id": "cassandra-engine",
                 "title": "Cassandra Engine",
-                "shortDesc": "A Cassandra database engine built from scratch in Rust.",
-                "fullDesc": "A complete implementation of a Cassandra database engine built from the ground up in Rust. Implements all of Cassandra's native protocols, including the CQL binary protocol, gossip protocol for node discovery, and distributed data management. Built for performance and correctness.",
+                "shortDesc": "A high-performance, distributed Cassandra database engine engineered entirely from scratch in Rust.",
+                "fullDesc": "A zero-dependency, ground-up implementation of an Apache Cassandra distributed database engine written entirely in Rust. This system strictly adheres to native Cassandra protocols—including the CQL binary protocol and Gossip protocol for peer-to-peer node discovery—ensuring fault tolerance, high availability, and rigorous data consistency across distributed clusters.",
                 "tags": [
                     "Rust",
                     "Databases",
@@ -96,8 +96,8 @@
             {
                 "id": "specforge",
                 "title": "SpecForge",
-                "shortDesc": "CLI platform for AI-powered Property-Based Testing of APIs. (Thesis)",
-                "fullDesc": "My thesis project: a CLI platform specialized in Property-Based Testing (PBT) for APIs in any programming language. Leverages LLMs, a custom code parser and searcher, and a proprietary schema synthesis engine to automatically generate tests that find edge cases, security vulnerabilities, and volume limit scenarios for any API endpoint.",
+                "shortDesc": "An AI-driven CLI platform for automated Property-Based Testing (PBT) and API vulnerability detection.",
+                "fullDesc": "My degree thesis: a sophisticated CLI platform designed for language-agnostic Property-Based Testing (PBT) of APIs. It integrates large language models (LLMs) with advanced Abstract Syntax Tree (AST) parsing and deep code logic extraction. By leveraging a proprietary schema synthesis engine, SpecForge autonomously generates comprehensive test suites to expose edge cases, unearth security vulnerabilities, and stress-test volume limits across any API endpoint.",
                 "tags": [
                     "CLI",
                     "AI/LLM",
@@ -110,31 +110,31 @@
     },
     "academic": {
         "title": "Academic",
-        "subtitle": "Education & achievements",
+        "subtitle": "Academic Excellence & Milestones",
         "items": [
             {
                 "id": "uba",
                 "institution": "Universidad de Buenos Aires (UBA)",
                 "degree": "Software Engineering",
                 "period": "Graduated in record time",
-                "description": "Third person in the entire history of the university to graduate in record time. The last person to achieve this feat did so in 1938.",
-                "highlight": "Record graduation — 3rd person in history"
+                "description": "Became the third person in the institution's entire history to earn a Software Engineering degree in record time—an unprecedented achievement untouched since 1938.",
+                "highlight": "Historic Academic Record"
             },
             {
                 "id": "olympiad",
                 "institution": "National Informatics Olympiad",
                 "degree": "2nd Place — National Level",
                 "period": "Age 16",
-                "description": "Competed at the national level in Argentina's Informatics Olympiad and secured second place at just 16 years old.",
-                "highlight": "2nd place nationally at age 16"
+                "description": "Secured 2nd place nationwide at the Argentine Informatics Olympiad, demonstrating elite algorithmic problem-solving skills at just 16 years old.",
+                "highlight": "National Silver Medalist"
             },
             {
                 "id": "pellegrini",
                 "institution": "Escuela Superior de Comercio Carlos Pellegrini",
                 "degree": "Secondary Education",
                 "period": "Graduated",
-                "description": "Graduated from one of the most prestigious and nationally recognized secondary schools in Argentina.",
-                "highlight": "Nationally prestigious institution"
+                "description": "Alumnus of the Escuela Superior de Comercio Carlos Pellegrini, widely recognized as one of Argentina's most rigorous and prestigious academic institutions.",
+                "highlight": "Elite Secondary Education"
             }
         ]
     },

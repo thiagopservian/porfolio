@@ -11,13 +11,13 @@
         "greeting": "Hola, soy",
         "name": "Thiago Pacheco",
         "role": "Ingeniero de Software",
-        "bio": "21 años, graduado de Ingeniería en Software de la Universidad de Buenos Aires — una de solo 3 personas en la historia en graduarse en tiempo récord (la última en lograrlo fue en 1938). Actualmente trabajo como Ingeniero de Datos en Lovelytics. Apasionado por construir soluciones de software innovadoras, desde sistemas distribuidos hasta herramientas potenciadas por IA.",
+        "bio": "A mis 21 años, soy Ingeniero de Software graduado de la Universidad de Buenos Aires, con la distinción de ser una de las únicas tres personas en la historia de la institución en completar la carrera en tiempo récord —un hito inalcanzado desde 1938—. Como Data Engineer Junior en Lovelytics, canalizo mi pasión hacia la arquitectura de soluciones de software robustas, destacándome en la intersección entre los sistemas distribuidos complejos y las tecnologías de inteligencia artificial de vanguardia.",
         "cta": "Ver Mi Trabajo",
         "contact": "Contactame"
     },
     "experience": {
         "title": "Experiencia",
-        "subtitle": "Mi recorrido profesional",
+        "subtitle": "Mi Trayectoria Profesional",
         "items": [
             {
                 "id": "lovelytics",
@@ -25,8 +25,8 @@
                 "role": "Ingeniero de Datos",
                 "period": "Diciembre 2025 — Presente",
                 "location": "Estados Unidos (Remoto)",
-                "shortDesc": "Construyendo pipelines de datos y soluciones de ingeniería en una corporación de análisis de datos estadounidense.",
-                "fullDesc": "Trabajo como Ingeniero de Datos en Lovelytics, una corporación estadounidense de análisis de datos. Responsable de diseñar e implementar pipelines de datos escalables, optimizar flujos de trabajo de datos y colaborar con equipos multidisciplinarios para entregar soluciones basadas en datos para clientes empresariales.",
+                "shortDesc": "Arquitectando pipelines de datos escalables e impulsando soluciones de ingeniería a nivel empresarial para una firma líder de análisis en EE. UU.",
+                "fullDesc": "Como Data Engineer Junior en Lovelytics, una destacada corporación estadounidense de análisis de datos, me especializo en el diseño y despliegue de pipelines de datos altamente escalables. Me enfoco en optimizar flujos de trabajo complejos y colaborar con equipos multidisciplinarios para entregar soluciones sofisticadas y basadas en datos que potencian a clientes empresariales.",
                 "tags": [
                     "Ingeniería de Datos",
                     "Cloud",
@@ -39,8 +39,8 @@
                 "role": "Ganador — Competencia de Ingeniería",
                 "period": "2025",
                 "location": "Universidad de Buenos Aires",
-                "shortDesc": "Gané la competencia anual de ingeniería, presentando soluciones innovadoras evaluadas por líderes de la industria y figuras públicas.",
-                "fullDesc": "Competí y gané el FIUBAtón 2025, una competencia anual de ingeniería en la Facultad de Ingeniería (FIUBA). Los equipos abordan problemas del mundo real y presentan sus soluciones ante un jurado compuesto por ejecutivos de empresas, políticos, inversores y autoridades nacionales de alto rango. La solución ganadora fue seleccionada por votación del jurado entre todos los equipos participantes.",
+                "shortDesc": "Campeón del principal hackathon de ingeniería de la facultad, desarrollando una solución tecnológica ganadora validada por ejecutivos de la industria y funcionarios gubernamentales.",
+                "fullDesc": "Ganador del primer puesto en el FIUBAtón 2025, la competencia de ingeniería más importante de la Facultad de Ingeniería (FIUBA). Liderando un equipo colaborativo, diseñamos una solución innovadora para un desafío de alto impacto del mundo real. Nuestro proyecto obtuvo el voto ganador de un distinguido panel compuesto por ejecutivos corporativos, inversores y altas autoridades nacionales.",
                 "tags": [
                     "Competencia",
                     "Innovación",
@@ -51,15 +51,15 @@
     },
     "projects": {
         "title": "Proyectos",
-        "subtitle": "Lo que he construido",
+        "subtitle": "Proyectos de Ingeniería Destacados",
         "viewRepo": "Ver Repositorio",
         "viewMore": "Más Información",
         "items": [
             {
                 "id": "melodia",
                 "title": "Melodía",
-                "shortDesc": "Una recreación completa de Spotify con capacidades potenciadas por IA.",
-                "fullDesc": "Una plataforma de streaming de música integral que recrea todas las funcionalidades principales de Spotify, más dos características adicionales revolucionarias: búsqueda estilo Shazam que identifica canciones mediante tarareo o reproducción de otra canción, y Cover IA — la característica estrella — que permite seleccionar la voz de cualquier cantante y generar un cover de cualquier canción (imaginá a Michael Jackson cantando algo de Queen).",
+                "shortDesc": "Una plataforma full-stack de streaming de música altamente avanzada, diseñada con una interfaz fluida y capacidades revolucionarias de IA.",
+                "fullDesc": "Una ambiciosa recreación full-stack de Spotify que iguala su infraestructura principal de streaming e introduce dos funcionalidades disruptivas. Cuenta con un avanzado motor de reconocimiento de audio (estilo Shazam) capaz de identificar canciones mediante tarareo o sonido ambiente. Además, integra un motor de 'Cover IA' en tiempo real, permitiendo a los usuarios mapear sin problemas el modelo vocal de cualquier artista en cualquier pista, generando sin esfuerzo crossovers como Michael Jackson interpretando un himno de Queen.",
                 "tags": [
                     "IA",
                     "Música",
@@ -71,8 +71,8 @@
             {
                 "id": "vibetrip",
                 "title": "VibeTrip",
-                "shortDesc": "Una recreación de TripAdvisor para descubrir y reseñar destinos de viaje.",
-                "fullDesc": "Una recreación completa de TripAdvisor, con descubrimiento de destinos, reseñas de usuarios, herramientas de planificación de viajes y una interfaz intuitiva para explorar experiencias de viaje en todo el mundo.",
+                "shortDesc": "Un ecosistema full-stack integral para el descubrimiento de viajes, modelado a partir de TripAdvisor.",
+                "fullDesc": "Una plataforma full-stack robusta inspirada en TripAdvisor, diseñada para facilitar el descubrimiento de viajes a nivel global. Cuenta con una interfaz UI/UX fluida para la exploración de destinos, reseñas dinámicas generadas por usuarios y herramientas interactivas de planificación de viajes, todo respaldado por una arquitectura de base de datos altamente optimizada.",
                 "tags": [
                     "Full Stack",
                     "Web App",
@@ -83,8 +83,8 @@
             {
                 "id": "cassandra-engine",
                 "title": "Motor de Cassandra",
-                "shortDesc": "Un motor de base de datos Cassandra construido desde cero en Rust.",
-                "fullDesc": "Una implementación completa de un motor de base de datos Cassandra construido desde cero en Rust. Implementa todos los protocolos nativos de Cassandra, incluyendo el protocolo binario CQL, protocolo gossip para descubrimiento de nodos y gestión distribuida de datos. Construido para rendimiento y correctitud.",
+                "shortDesc": "Un motor de base de datos Cassandra distribuido y de alto rendimiento, programado completamente desde cero en Rust.",
+                "fullDesc": "Una implementación desde cero y sin dependencias externas de un motor de base de datos distribuida Apache Cassandra, escrito íntegramente en Rust. Este sistema se adhiere estrictamente a los protocolos nativos de Cassandra —incluyendo el protocolo binario CQL y el protocolo Gossip para el descubrimiento de nodos P2P—, garantizando tolerancia a fallos, alta disponibilidad y una rigurosa consistencia de datos a través de clústeres distribuidos.",
                 "tags": [
                     "Rust",
                     "Bases de Datos",
@@ -96,8 +96,8 @@
             {
                 "id": "specforge",
                 "title": "SpecForge",
-                "shortDesc": "Plataforma CLI para testing basado en propiedades potenciado por IA para APIs. (Tesis)",
-                "fullDesc": "Mi proyecto de tesis: una plataforma CLI especializada en Property-Based Testing (PBT) para APIs en cualquier lenguaje de programación. Utiliza LLMs, un parser y buscador de código propio, y un motor de síntesis de esquemas propietario para generar automáticamente tests que encuentran casos borde, vulnerabilidades de seguridad y escenarios de límite de volumen para cualquier endpoint de una API.",
+                "shortDesc": "Una plataforma CLI impulsada por IA para Property-Based Testing (PBT) automatizado y detección de vulnerabilidades en APIs.",
+                "fullDesc": "Mi tesis de grado: una sofisticada plataforma CLI diseñada para realizar Property-Based Testing (PBT) en APIs, agnóstica al lenguaje de programación. Integra grandes modelos de lenguaje (LLMs) con un análisis avanzado de Árboles de Sintaxis Abstracta (AST) y extracción profunda de lógica de código. Mediante un motor propietario de síntesis de esquemas, SpecForge genera de forma autónoma suites de pruebas exhaustivas para exponer casos límite, descubrir vulnerabilidades de seguridad y someter a pruebas de estrés los límites de volumen en cualquier endpoint.",
                 "tags": [
                     "CLI",
                     "IA/LLM",
@@ -110,31 +110,31 @@
     },
     "academic": {
         "title": "Académico",
-        "subtitle": "Educación y logros",
+        "subtitle": "Excelencia Académica e Hitos",
         "items": [
             {
                 "id": "uba",
                 "institution": "Universidad de Buenos Aires (UBA)",
                 "degree": "Ingeniería en Software",
                 "period": "Graduado en tiempo récord",
-                "description": "Tercera persona en toda la historia de la universidad en graduarse en tiempo récord. La última persona en lograr esta hazaña lo hizo en 1938.",
-                "highlight": "Graduación récord — 3ra persona en la historia"
+                "description": "Me convertí en la tercera persona en toda la historia de la institución en obtener el título de Ingeniero de Software en tiempo récord —un logro sin precedentes e inalcanzado desde 1938.",
+                "highlight": "Récord Académico Histórico"
             },
             {
                 "id": "olympiad",
                 "institution": "Olimpiada Nacional de Informática",
                 "degree": "2do Puesto — Nivel Nacional",
                 "period": "16 años",
-                "description": "Competí a nivel nacional en la Olimpiada de Informática de Argentina y obtuve el segundo puesto con tan solo 16 años.",
-                "highlight": "2do puesto nacional a los 16 años"
+                "description": "Obtuve el 2do puesto a nivel nacional en la Olimpiada Argentina de Informática, demostrando habilidades de élite en la resolución algorítmica de problemas con tan solo 16 años.",
+                "highlight": "Medallista de Plata Nacional"
             },
             {
                 "id": "pellegrini",
                 "institution": "Escuela Superior de Comercio Carlos Pellegrini",
                 "degree": "Educación Secundaria",
                 "period": "Graduado",
-                "description": "Graduado de una de las escuelas secundarias más prestigiosas y reconocidas a nivel nacional en Argentina.",
-                "highlight": "Institución de prestigio nacional"
+                "description": "Exalumno de la Escuela Superior de Comercio Carlos Pellegrini, ampliamente reconocida como una de las instituciones académicas más rigurosas y prestigiosas de Argentina.",
+                "highlight": "Educación Secundaria de Élite"
             }
         ]
     },

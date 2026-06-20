@@ -46,6 +46,7 @@
 }
 
 .nav-link {
+  position: relative;
   background: none;
   border: none;
   color: var(--text-secondary);
@@ -58,9 +59,32 @@
   font-family: 'Inter', sans-serif;
 }
 
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
 .nav-link:hover {
   color: var(--accent);
   background: var(--accent-glow);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
 }
 
 .navbar-actions {

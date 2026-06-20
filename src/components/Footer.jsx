@@ -1,4 +1,5 @@
 import { useLang } from '../context/LangContext';
+import { SiReact } from 'react-icons/si';
 import './Footer.css';
 
 export default function Footer() {
@@ -26,7 +27,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-bottom">
                     <p>{t('footer.copyright')}</p>
-                    <p className="footer-built">{t('footer.madeWith')} ⚛️</p>
+                    <p className="footer-built">{t('footer.madeWith')} <SiReact style={{ verticalAlign: '-0.125em' }} /></p>
                 </div>
             </div>
         </footer>

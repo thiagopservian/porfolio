@@ -1,6 +1,21 @@
 import { useState } from 'react';
 import { useLang } from '../context/LangContext';
+import { FiMusic } from 'react-icons/fi';
+import { FaPlane, FaMicroscope } from 'react-icons/fa';
+import { SiApachecassandra } from 'react-icons/si';
 import './Projects.css';
+
+const projectIcons = {
+    melodia: FiMusic,
+    vibetrip: FaPlane,
+    'cassandra-engine': SiApachecassandra,
+    specforge: FaMicroscope,
+};
+
+function ProjectIcon({ id }) {
+    const Icon = projectIcons[id];
+    return Icon ? <Icon /> : null;
+}
 
 export default function Projects() {
     const { t, getList } = useLang();
@@ -22,12 +37,7 @@ export default function Projects() {
                     >
                         <div className="project-media">
                             <div className="project-img-placeholder">
-                                <span className="project-icon">
-                                    {item.id === 'melodia' && '🎵'}
-                                    {item.id === 'vibetrip' && '✈️'}
-                                    {item.id === 'cassandra-engine' && '⚙️'}
-                                    {item.id === 'specforge' && '🔬'}
-                                </span>
+                                <span className="project-icon"><ProjectIcon id={item.id} /></span>
                             </div>
                             <div className="project-overlay">
                                 <button className="btn btn-primary btn-sm" onClick={() => setExpandedId(item.id)}>
@@ -67,12 +77,7 @@ export default function Projects() {
 
                             <div className="project-modal-media">
                                 <div className="project-modal-img-placeholder">
-                                    <span className="project-icon-lg">
-                                        {item.id === 'melodia' && '🎵'}
-                                        {item.id === 'vibetrip' && '✈️'}
-                                        {item.id === 'cassandra-engine' && '⚙️'}
-                                        {item.id === 'specforge' && '🔬'}
-                                    </span>
+                                    <span className="project-icon-lg"><ProjectIcon id={item.id} /></span>
                                     <p>Media placeholder — add images, videos or audio here</p>
                                 </div>
                             </div>

@@ -1,8 +1,25 @@
+import { useRef, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
+import heroVideoVp9 from '../assets/hero-video.webm';
+import heroVideoVp8 from '../assets/hero-video-vp8.webm';
+import heroPoster from '../assets/hero-poster.png';
 import './Hero.css';
 
 export default function Hero() {
     const { t } = useLang();
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        // Aseguramos la reproducción automática al cargar
+        videoRef.current?.play().catch(() => {});
+    }, []);
+
+    const restartVideo = () => {
+        const v = videoRef.current;
+        if (!v) return;
+        v.currentTime = 0;
+        v.play().catch(() => {});
+    };
 
     return (
         <section id="about" className="hero">
@@ -35,13 +52,21 @@ export default function Hero() {
                 </div>
                 <div className="hero-visual">
                     <div className="hero-video-wrapper">
-                        {/* Placeholder for transparent background video - replace with your video */}
-                        <div className="hero-video-placeholder">
-                            <div className="placeholder-avatar">
-                                <span>TP</span>
-                            </div>
-                            <p className="placeholder-note">Video placeholder</p>
-                        </div>
+                        <video
+                            ref={videoRef}
+                            className="hero-video"
+                            autoPlay
+                            muted
+                            playsInline
+                            preload="auto"
+                            poster={heroPoster}
+                            onClick={restartVideo}
+                            title="Click to replay"
+                        >
+                            <source src={heroVideoVp9} type="video/webm; codecs=vp9" />
+                            <source src={heroVideoVp8} type="video/webm; codecs=vp8" />
+                            <img src={heroPoster} alt="Thiago Pacheco" className="hero-video" />
+                        </video>
                     </div>
                 </div>
             </div>

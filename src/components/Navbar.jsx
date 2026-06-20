@@ -8,6 +8,9 @@ export default function Navbar() {
     const { lang, toggleLang, t } = useLang();
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('about');
+
+    const sections = ['about', 'experience', 'projects', 'academic', 'skills'];
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -15,12 +18,30 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                // Tomar la sección más visible en pantalla
+                const visible = entries
+                    .filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+                if (visible) setActiveSection(visible.target.id);
+            },
+            { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+        );
+
+        sections.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     const scrollTo = (id) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
         setMenuOpen(false);
     };
-
-    const sections = ['about', 'experience', 'projects', 'academic', 'skills'];
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -31,7 +52,11 @@ export default function Navbar() {
 
                 <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
                     {sections.map(s => (
-                        <button key={s} className="nav-link" onClick={() => scrollTo(s)}>
+                        <button
+                            key={s}
+                            className={`nav-link ${activeSection === s ? 'active' : ''}`}
+                            onClick={() => scrollTo(s)}
+                        >
                             {t(`nav.${s}`)}
                         </button>
                     ))}

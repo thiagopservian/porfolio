@@ -1,40 +1,48 @@
 import { useLang } from '../context/LangContext';
+import {
+    SiPython, SiRust, SiJavascript, SiTypescript, SiGo,
+    SiReact, SiNodedotjs, SiFastapi, SiNextdotjs,
+    SiDocker, SiGit, SiLinux,
+    SiPostgresql, SiApachecassandra, SiRedis, SiMongodb,
+} from 'react-icons/si';
+import { FaAws, FaRobot, FaFlask, FaBrain } from 'react-icons/fa';
+import { FiDatabase, FiRefreshCw, FiGlobe, FiLayers } from 'react-icons/fi';
 import './Skills.css';
 
 const skillsData = {
     languages: [
-        { name: 'Python', icon: '🐍' },
-        { name: 'Rust', icon: '🦀' },
-        { name: 'JavaScript', icon: '⚡' },
-        { name: 'TypeScript', icon: '📘' },
-        { name: 'SQL', icon: '🗃️' },
-        { name: 'Go', icon: '🔵' },
+        { name: 'Python', icon: SiPython },
+        { name: 'Rust', icon: SiRust },
+        { name: 'JavaScript', icon: SiJavascript },
+        { name: 'TypeScript', icon: SiTypescript },
+        { name: 'SQL', icon: FiDatabase },
+        { name: 'Go', icon: SiGo },
     ],
     frameworks: [
-        { name: 'React', icon: '⚛️' },
-        { name: 'Node.js', icon: '🟢' },
-        { name: 'FastAPI', icon: '🚀' },
-        { name: 'Next.js', icon: '▲' },
+        { name: 'React', icon: SiReact },
+        { name: 'Node.js', icon: SiNodedotjs },
+        { name: 'FastAPI', icon: SiFastapi },
+        { name: 'Next.js', icon: SiNextdotjs },
     ],
     tools: [
-        { name: 'Docker', icon: '🐳' },
-        { name: 'Git', icon: '📦' },
-        { name: 'AWS', icon: '☁️' },
-        { name: 'Linux', icon: '🐧' },
-        { name: 'CI/CD', icon: '🔄' },
+        { name: 'Docker', icon: SiDocker },
+        { name: 'Git', icon: SiGit },
+        { name: 'AWS', icon: FaAws },
+        { name: 'Linux', icon: SiLinux },
+        { name: 'CI/CD', icon: FiRefreshCw },
     ],
     databases: [
-        { name: 'PostgreSQL', icon: '🐘' },
-        { name: 'Cassandra', icon: '👁️' },
-        { name: 'Redis', icon: '🔴' },
-        { name: 'MongoDB', icon: '🍃' },
+        { name: 'PostgreSQL', icon: SiPostgresql },
+        { name: 'Cassandra', icon: SiApachecassandra },
+        { name: 'Redis', icon: SiRedis },
+        { name: 'MongoDB', icon: SiMongodb },
     ],
     concepts: [
-        { name: 'Distributed Systems', icon: '🌐' },
-        { name: 'Machine Learning', icon: '🤖' },
-        { name: 'System Design', icon: '🏗️' },
-        { name: 'PBT Testing', icon: '🧪' },
-        { name: 'LLM Engineering', icon: '🧠' },
+        { name: 'Distributed Systems', icon: FiGlobe },
+        { name: 'Machine Learning', icon: FaRobot },
+        { name: 'System Design', icon: FiLayers },
+        { name: 'PBT Testing', icon: FaFlask },
+        { name: 'LLM Engineering', icon: FaBrain },
     ],
 };
 
@@ -55,10 +63,10 @@ export default function Skills() {
                             {t(`skills.categories.${category}`)}
                         </h3>
                         <div className="skills-list">
-                            {skills.map(skill => (
-                                <div key={skill.name} className="skill-item">
-                                    <span className="skill-icon">{skill.icon}</span>
-                                    <span className="skill-name">{skill.name}</span>
+                            {skills.map(({ name, icon: Icon }) => (
+                                <div key={name} className="skill-item">
+                                    <span className="skill-icon"><Icon /></span>
+                                    <span className="skill-name">{name}</span>
                                 </div>
                             ))}
                         </div>
