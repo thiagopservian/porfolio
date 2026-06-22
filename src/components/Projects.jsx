@@ -24,7 +24,7 @@ export default function Projects() {
 
     return (
         <section id="projects" className="projects">
-            <div className="section-header">
+            <div className="section-header reveal">
                 <h2 className="section-title">{t('projects.title')}</h2>
                 <p className="section-subtitle">{t('projects.subtitle')}</p>
             </div>
@@ -33,7 +33,8 @@ export default function Projects() {
                 {items.map((item, index) => (
                     <div
                         key={item.id}
-                        className={`project-card ${index === 0 ? 'featured' : ''}`}
+                        className={`project-card reveal-fade ${index === 0 ? 'featured' : ''}`}
+                        style={{ transitionDelay: `${index * 90}ms` }}
                     >
                         <div className="project-media">
                             <div className="project-img-placeholder">

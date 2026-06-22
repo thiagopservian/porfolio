@@ -51,14 +51,18 @@ export default function Skills() {
 
     return (
         <section id="skills" className="skills">
-            <div className="section-header">
+            <div className="section-header reveal">
                 <h2 className="section-title">{t('skills.title')}</h2>
                 <p className="section-subtitle">{t('skills.subtitle')}</p>
             </div>
 
             <div className="skills-container">
-                {Object.entries(skillsData).map(([category, skills]) => (
-                    <div key={category} className="skills-category">
+                {Object.entries(skillsData).map(([category, skills], index) => (
+                    <div
+                        key={category}
+                        className="skills-category reveal-fade"
+                        style={{ transitionDelay: `${index * 80}ms` }}
+                    >
                         <h3 className="skills-category-title">
                             {t(`skills.categories.${category}`)}
                         </h3>

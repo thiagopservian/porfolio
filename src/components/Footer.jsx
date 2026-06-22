@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <footer className="footer">
-            <div className="footer-inner">
+            <div className="footer-inner reveal-fade">
                 <div className="footer-top">
                     <div className="footer-brand">
                         <span className="footer-logo"><img src={logo} alt="Thiago Pacheco" className="footer-logo-img" /></span>

@@ -42,6 +42,37 @@
   box-sizing: border-box;
 }
 
+/* Animaciones de aparición */
+.reveal,
+.reveal-fade {
+  opacity: 0;
+}
+
+.reveal {
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-fade {
+  transition: opacity 0.7s ease;
+}
+
+.reveal.is-visible,
+.reveal-fade.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -54,12 +54,12 @@ export default function Journey() {
 
     return (
         <section id="journey" className="experience">
-            <div className="section-header">
+            <div className="section-header reveal">
                 <h2 className="section-title">{t('journey.title')}</h2>
                 <p className="section-subtitle">{t('journey.subtitle')}</p>
             </div>
 
-            <div className="timeline">
+            <div className="timeline reveal-fade">
                 <div className={`timeline-axis line-academic ${hidden === 'academic' ? 'line-hidden' : ''}`}>
                     <button
                         type="button"
