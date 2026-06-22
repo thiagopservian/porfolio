@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLang } from '../context/LangContext';
-import { FiMusic } from 'react-icons/fi';
-import { FaPlane, FaMicroscope } from 'react-icons/fa';
+import { FiMusic, FiTerminal } from 'react-icons/fi';
+import { FaPlane, FaMicroscope, FaBrain, FaDice } from 'react-icons/fa';
 import { SiApachecassandra } from 'react-icons/si';
 import './Projects.css';
 
@@ -10,6 +10,9 @@ const projectIcons = {
     vibetrip: FaPlane,
     'cassandra-engine': SiApachecassandra,
     specforge: FaMicroscope,
+    'predictive-models': FaBrain,
+    monopoly: FaDice,
+    'zorro-ocas': FiTerminal,
 };
 
 function ProjectIcon({ id }) {

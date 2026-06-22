@@ -6,7 +6,7 @@
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -16,6 +16,12 @@
     border-radius: 16px;
     padding: 1.5rem;
     transition: all 0.3s ease;
+}
+
+/* Categoría con muchos items / nombres largos: ocupa 2 columnas
+   (queda en la misma fila que Databases) */
+.skills-category.is-wide {
+    grid-column: span 2;
 }
 
 .skills-category:hover {
@@ -67,8 +73,18 @@
     font-weight: 500;
 }
 
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .skills-container {
         grid-template-columns: 1fr;
+    }
+
+    .skills-category.is-wide {
+        grid-column: auto;
     }
 }

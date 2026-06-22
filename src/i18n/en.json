@@ -110,6 +110,43 @@
                     "Thesis"
                 ],
                 "repo": "#"
+            },
+            {
+                "id": "predictive-models",
+                "title": "Predictive Models & AI Analysis",
+                "shortDesc": "A suite of advanced machine learning models for predictive analytics, clustering, and NLP sentiment classification.",
+                "fullDesc": "Engineered a diverse portfolio of advanced machine learning pipelines. This encompasses robust predictive models for weather forecasting and real estate pricing leveraging Random Forest and XGBoost, alongside sophisticated NLP ensemble architectures (Voting/Stacking, Naive Bayes, Neural Networks) for highly accurate film review sentiment analysis.",
+                "tags": [
+                    "Machine Learning",
+                    "Python",
+                    "NLP",
+                    "XGBoost"
+                ],
+                "repo": "#"
+            },
+            {
+                "id": "monopoly",
+                "title": "Monopoly Game Engine",
+                "shortDesc": "A fully functional Monopoly game engine built from scratch in Java, featuring complex state management and custom UI themes.",
+                "fullDesc": "Developed a custom Monopoly game engine entirely from scratch using Java, demonstrating a strong command of Object-Oriented Programming (OOP). The project features a robust implementation of complex game mechanics—including property management, player auctions, and banking logic—complemented by custom graphical interfaces.",
+                "tags": [
+                    "Java",
+                    "OOP",
+                    "Game"
+                ],
+                "repo": "#"
+            },
+            {
+                "id": "zorro-ocas",
+                "title": "Zorro y Ocas (Assembly)",
+                "shortDesc": "A logic-based terminal game programmed strictly in Assembly language to master CPU architecture and memory management.",
+                "fullDesc": "A rigorous technical project consisting of a logic-based terminal game developed entirely in low-level Assembly language. This project was explicitly built to master low-level memory management, CPU architecture, and direct hardware interaction, featuring highly optimized algorithmic execution.",
+                "tags": [
+                    "Assembly",
+                    "Low-Level",
+                    "Game"
+                ],
+                "repo": "#"
             }
         ]
     },
@@ -149,9 +186,9 @@
         "categories": {
             "languages": "Languages",
             "frameworks": "Frameworks & Libraries",
-            "tools": "Tools & Platforms",
+            "tools": "Cloud & Tools",
             "databases": "Databases",
-            "concepts": "Concepts"
+            "concepts": "Core Concepts"
         }
     },
     "footer": {
