@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { useLang } from '../context/LangContext';
-import logo from '../assets/logo.png';
+import logoDark from '../assets/logo_tema_oscuro.png';
+import logoLight from '../assets/logo_tema_claro.png';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -48,7 +49,7 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-inner">
                 <button className="navbar-logo" onClick={() => scrollTo('about')}>
-                    <img src={logo} alt="Thiago Pacheco" className="navbar-logo-img" />
+                    <img src={theme === 'dark' ? logoDark : logoLight} alt="Thiago Pacheco" className="navbar-logo-img" />
                 </button>
 
                 <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>

@@ -12,6 +12,31 @@
         "title": "Experiencia y Formación",
         "subtitle": "Mi trayectoria profesional y académica"
     },
+    "teaching": {
+        "title": "Universidad de Buenos Aires (UBA) - FIUBA",
+        "subtitle": "Ayudante de Cátedra y Mentor de Proyectos",
+        "period": "Agosto 2024 — Presente",
+        "nodes": [
+            {
+                "id": "is2",
+                "label": "Ingeniería de Software 2 - Mentor",
+                "period": "Marzo 2026 — Presente",
+                "desc": "Ayudante de Cátedra y Mentor. Guiando a grupos de estudiantes a través del desarrollo integral de réplicas de plataformas full-stack. Responsable del seguimiento ágil semanal, mentoría arquitectónica y revisión de código."
+            },
+            {
+                "id": "algos-segundo",
+                "label": "Teoría de Algoritmos - Ayudante Segundo",
+                "period": "Marzo 2025 — Presente",
+                "desc": "Ascendido a Ayudante Segundo por excelencia académica. Responsable de impartir clases, evaluar proyectos complejos y gestionar la estructura organizativa de la cátedra."
+            },
+            {
+                "id": "algos-adhonorem",
+                "label": "Teoría de Algoritmos - Ayudante Ad-honorem",
+                "period": "Agosto 2024 — Febrero 2025",
+                "desc": "Comencé como Ayudante Ad-honorem (Corrector). Encargado de la evaluación de parciales y trabajos prácticos, brindando feedback técnico detallado a los alumnos."
+            }
+        ]
+    },
     "hero": {
         "greeting": "Hola, soy",
         "name": "Thiago Pacheco",
@@ -27,15 +52,35 @@
             {
                 "id": "lovelytics",
                 "company": "Lovelytics",
-                "role": "Ingeniero de Datos",
+                "role": "Ingeniero de Datos Junior",
                 "period": "Diciembre 2025 — Presente",
                 "location": "Estados Unidos (Remoto)",
-                "shortDesc": "Arquitectando pipelines de datos escalables e impulsando soluciones de ingeniería a nivel empresarial para una firma líder de análisis en EE. UU.",
-                "fullDesc": "Como Data Engineer Junior en Lovelytics, una destacada corporación estadounidense de análisis de datos, me especializo en el diseño y despliegue de pipelines de datos altamente escalables. Me enfoco en optimizar flujos de trabajo complejos y colaborar con equipos multidisciplinarios para entregar soluciones sofisticadas y basadas en datos que potencian a clientes empresariales.",
+                "shortDesc": "Arquitectando pipelines de datos escalables e impulsando soluciones de ingeniería a nivel empresarial para clientes de primer nivel.",
+                "fullDesc": "Arquitectando pipelines de datos escalables e impulsando soluciones de ingeniería a nivel empresarial para clientes de primer nivel.",
                 "tags": [
                     "Ingeniería de Datos",
                     "Cloud",
                     "Analytics"
+                ],
+                "clients": [
+                    {
+                        "id": "ypf",
+                        "label": "Cliente: YPF",
+                        "period": "Julio 2026 — Presente",
+                        "desc": "Desarrollo y mantenimiento de arquitecturas de datos robustas para el sector energético, con enfoque en procesamiento de alto rendimiento y soluciones analíticas escalables."
+                    },
+                    {
+                        "id": "gp",
+                        "label": "Cliente: GP (Grupo Petersen)",
+                        "period": "Enero 2026 — Julio 2026",
+                        "desc": "Diseño y optimización de pipelines de datos escalables para procesar datos financieros minoristas de alto volumen, mejorando la fiabilidad de los datos y la infraestructura en la nube."
+                    },
+                    {
+                        "id": "dataschool",
+                        "label": "Capacitación: data:school (Databricks)",
+                        "period": "Diciembre 2025",
+                        "desc": "Completé el programa de capacitación intensivo 'data:school', enfocado en la arquitectura de Databricks, computación distribuida y prácticas avanzadas de ingeniería de datos."
+                    }
                 ]
             },
             {
@@ -59,6 +104,7 @@
         "subtitle": "Proyectos de Ingeniería Destacados",
         "viewRepo": "Ver Repositorio",
         "viewMore": "Más Información",
+        "showLess": "Ver Menos",
         "items": [
             {
                 "id": "melodia",

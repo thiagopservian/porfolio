@@ -12,6 +12,31 @@
         "title": "Experience & Education",
         "subtitle": "My professional and academic path"
     },
+    "teaching": {
+        "title": "Universidad de Buenos Aires (UBA) - FIUBA",
+        "subtitle": "Teaching Assistant & Project Mentor",
+        "period": "August 2024 — Present",
+        "nodes": [
+            {
+                "id": "is2",
+                "label": "Software Engineering 2 - Mentor",
+                "period": "March 2026 — Present",
+                "desc": "Serving as a Teaching Assistant and Mentor. Guiding student groups through the end-to-end development of full-stack platform replicas. Responsible for conducting weekly agile tracking, architectural mentoring, and code reviews."
+            },
+            {
+                "id": "algos-segundo",
+                "label": "Theory of Algorithms - Ayudante Segundo",
+                "period": "March 2025 — Present",
+                "desc": "Promoted to Ayudante Segundo due to academic excellence. Responsible for conducting teaching sessions, grading complex projects, and managing the organizational structure of the course."
+            },
+            {
+                "id": "algos-adhonorem",
+                "label": "Theory of Algorithms - Ayudante Ad-honorem",
+                "period": "August 2024 — February 2025",
+                "desc": "Started as an Ad-honorem Teaching Assistant (Grader). Tasked with evaluating exams and practical assignments, providing detailed technical feedback to students."
+            }
+        ]
+    },
     "hero": {
         "greeting": "Hello, I'm",
         "name": "Thiago Pacheco",
@@ -27,15 +52,35 @@
             {
                 "id": "lovelytics",
                 "company": "Lovelytics",
-                "role": "Data Engineer",
+                "role": "Data Engineer Junior",
                 "period": "December 2025 — Present",
                 "location": "United States (Remote)",
-                "shortDesc": "Architecting scalable data pipelines and driving enterprise-level engineering solutions at a premier US-based analytics firm.",
-                "fullDesc": "As a Junior Data Engineer at Lovelytics, a prominent US-based analytics corporation, I specialize in designing and deploying highly scalable data pipelines. I focus on optimizing complex data workflows and collaborating with cross-functional teams to deliver sophisticated, data-driven solutions that empower enterprise clients.",
+                "shortDesc": "Architecting scalable data pipelines and driving enterprise-level engineering solutions for top-tier clients.",
+                "fullDesc": "Architecting scalable data pipelines and driving enterprise-level engineering solutions for top-tier clients.",
                 "tags": [
                     "Data Engineering",
                     "Cloud",
                     "Analytics"
+                ],
+                "clients": [
+                    {
+                        "id": "ypf",
+                        "label": "Client: YPF",
+                        "period": "July 2026 — Present",
+                        "desc": "Engineered and maintained robust data architectures for the energy sector, focusing on high-performance data processing and scalable analytic solutions."
+                    },
+                    {
+                        "id": "gp",
+                        "label": "Client: GP (Grupo Petersen)",
+                        "period": "January 2026 — July 2026",
+                        "desc": "Designed and optimized scalable data pipelines to process high-volume retail financial data, enhancing data reliability and cloud execution infrastructure."
+                    },
+                    {
+                        "id": "dataschool",
+                        "label": "Training: data:school (Databricks)",
+                        "period": "December 2025",
+                        "desc": "Completed the 'data:school' intensive training program, focusing on Databricks architecture, distributed computing, and advanced data engineering practices."
+                    }
                 ]
             },
             {
@@ -59,6 +104,7 @@
         "subtitle": "Featured Engineering Projects",
         "viewRepo": "View Repository",
         "viewMore": "Learn More",
+        "showLess": "Show Less",
         "items": [
             {
                 "id": "melodia",

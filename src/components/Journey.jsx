@@ -7,6 +7,7 @@ import './Experience.css';
 const SORT = {
     uba: 202607,         // Graduación UBA — julio 2026 (ingreso marzo 2023)
     lovelytics: 202512,  // Dic 2025 — Presente
+    teaching: 202511,    // Docencia FIUBA — presente, pero inició antes que Lovelytics
     fiubaton: 202509,    // Septiembre 2025
     pellegrini: 202112,  // Secundario 2017–2021 (egreso)
     olympiad: 202000,    // Olimpiada de Informática — 2020
@@ -17,9 +18,14 @@ export default function Journey() {
     const [activeId, setActiveId] = useState(null);
     // null | 'academic' | 'work' — solo una línea puede ocultarse a la vez
     const [hidden, setHidden] = useState(null);
+    // Acordeones por cliente de la línea de tiempo interna (Lovelytics)
+    const [openClients, setOpenClients] = useState({});
 
     const toggleHidden = (side) =>
         setHidden(prev => (prev === side ? null : side));
+
+    const toggleClient = (id) =>
+        setOpenClients(prev => ({ ...prev, [id]: !prev[id] }));
 
     const work = getList('experience.items').map(it => ({
         id: it.id,
@@ -32,6 +38,8 @@ export default function Journey() {
         desc: it.shortDesc,
         body: it.fullDesc,
         tags: it.tags || [],
+        clients: it.clients || [],
+        nodes: [],
     }));
 
     const academic = getList('academic.items').map(it => ({
@@ -44,13 +52,28 @@ export default function Journey() {
         desc: it.description,
         body: it.description,
         tags: it.highlight ? [it.highlight] : [],
+        clients: [],
+        nodes: [],
     }));
 
-    const items = [...work, ...academic].sort(
+    // Docencia en FIUBA (experiencia laboral, con trayectoria interna)
+    const teaching = {
+        id: 'teaching',
+        category: 'work',
+        title: t('teaching.title'),
+        subtitle: t('teaching.subtitle'),
+        period: t('teaching.period'),
+        location: '',
+        desc: '',
+        body: '',
+        tags: [],
+        clients: [],
+        nodes: getList('teaching.nodes'),
+    };
+
+    const items = [...work, ...academic, teaching].sort(
         (a, b) => (SORT[b.id] || 0) - (SORT[a.id] || 0)
     );
-
-    const activeItem = items.find(i => i.id === activeId);
 
     return (
         <section id="journey" className="experience">
@@ -78,11 +101,14 @@ export default function Journey() {
                         {t('nav.experience')}
                     </button>
                 </div>
-                {items.map(item => (
+                {items.map(item => {
+                    const isCollapsed = hidden === item.category;
+                    const isExpanded = activeId === item.id && !isCollapsed;
+                    return (
                     <div
                         key={item.id}
-                        className={`timeline-item cat-${item.category} ${hidden === item.category ? 'collapsed' : ''}`}
-                        onClick={() => setActiveId(item.id)}
+                        className={`timeline-item cat-${item.category} ${isCollapsed ? 'collapsed' : ''} ${isExpanded ? 'expanded' : ''} ${item.clients.length ? 'has-nested' : ''}`}
+                        onClick={() => setActiveId(prev => (prev === item.id ? null : item.id))}
                     >
                         <div className="timeline-dot">
                             <div className="timeline-dot-inner" />
@@ -97,10 +123,74 @@ export default function Journey() {
                                 <span className={`timeline-cat-label cat-${item.category}`}>
                                     {item.category === 'work' ? t('nav.experience') : t('nav.academic')}
                                 </span>
-                                <span className="timeline-period">{item.period}</span>
+                                <span className="timeline-period">
+                                    {item.period}{item.location ? ` · ${item.location}` : ''}
+                                </span>
                                 <h3 className="timeline-company">{item.title}</h3>
                                 <p className="timeline-role">{item.subtitle}</p>
-                                <p className="timeline-desc">{item.desc}</p>
+                                {item.desc && <p className="timeline-desc">{item.desc}</p>}
+
+                                <div className="timeline-extra">
+                                    {item.clients.length > 0 ? (
+                                        <div className="nested-timeline">
+                                            {item.clients.map(c => {
+                                                const open = !!openClients[c.id];
+                                                return (
+                                                    <div key={c.id} className={`nested-item ${open ? 'open' : ''}`}>
+                                                        <span className="nested-dot" />
+                                                        <div className="nested-content">
+                                                            <div className="nested-head">
+                                                                <span className="nested-label">{c.label}</span>
+                                                                {c.period && <span className="nested-period">{c.period}</span>}
+                                                            </div>
+                                                            <p className="nested-desc">{c.desc}</p>
+                                                            <button
+                                                                type="button"
+                                                                className="nested-more"
+                                                                onClick={(e) => { e.stopPropagation(); toggleClient(c.id); }}
+                                                            >
+                                                                <span>{open ? t('projects.showLess') : t('projects.viewMore')}</span>
+                                                                <svg className="nested-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+                                                            </button>
+                                                            <div className="nested-gallery">
+                                                                {[0, 1].map(i => (
+                                                                    <div key={i} className="nested-gallery-item"><FiImage /></div>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    ) : item.nodes.length > 0 ? (
+                                        <div className="nested-timeline">
+                                            {item.nodes.map(n => (
+                                                <div key={n.id} className="nested-item">
+                                                    <span className="nested-dot" />
+                                                    <div className="nested-content">
+                                                        <div className="nested-head">
+                                                            <span className="nested-label">{n.label}</span>
+                                                            {n.period && <span className="nested-period">{n.period}</span>}
+                                                        </div>
+                                                        <p className="nested-desc">{n.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <>
+                                            {item.body !== item.desc && (
+                                                <p className="timeline-fulldesc">{item.body}</p>
+                                            )}
+                                            <div className="timeline-gallery">
+                                                {[0, 1, 2].map(i => (
+                                                    <div key={i} className="timeline-gallery-item"><FiImage /></div>
+                                                ))}
+                                            </div>
+                                        </>
+                                    )}
+                                </div>
+
                                 {item.tags.length > 0 && (
                                     <div className="timeline-tags">
                                         {item.tags.map(tag => (
@@ -108,54 +198,19 @@ export default function Journey() {
                                         ))}
                                     </div>
                                 )}
-                                <button className="timeline-read-more">
+                                <button
+                                    className="timeline-read-more"
+                                    onClick={(e) => { e.stopPropagation(); setActiveId(prev => (prev === item.id ? null : item.id)); }}
+                                >
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                                    <span>{t('projects.viewMore')}</span>
+                                    <span>{isExpanded ? t('projects.showLess') : t('projects.viewMore')}</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                ))}
+                    );
+                })}
             </div>
-
-            {/* Modal overlay */}
-            {activeItem && (
-                <div className="exp-modal-overlay" onClick={() => setActiveId(null)}>
-                    <div className="exp-modal" onClick={e => e.stopPropagation()}>
-                        <button className="exp-modal-close" onClick={() => setActiveId(null)}>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
-                        </button>
-                        <div className="exp-modal-header">
-                            <div className="exp-modal-img-placeholder">
-                                <span>{activeItem.title.charAt(0)}</span>
-                            </div>
-                            <div>
-                                <h3>{activeItem.title}</h3>
-                                <p className="exp-modal-role">{activeItem.subtitle}</p>
-                                <p className="exp-modal-meta">
-                                    {activeItem.period}{activeItem.location ? ` · ${activeItem.location}` : ''}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="exp-modal-body">
-                            <p>{activeItem.body}</p>
-                        </div>
-                        {activeItem.tags.length > 0 && (
-                            <div className="exp-modal-tags">
-                                {activeItem.tags.map(tag => (
-                                    <span key={tag} className="tag">{tag}</span>
-                                ))}
-                            </div>
-                        )}
-                        <div className="exp-modal-media">
-                            <div className="media-placeholder">
-                                <span><FiImage /></span>
-                                <p>Media placeholder — add images or videos here</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
         </section>
     );
 }

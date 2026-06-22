@@ -3,10 +3,17 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 2000;
   padding: 1rem 2rem;
   transition: all 0.3s ease;
   background: transparent;
+  view-transition-name: navbar;
+}
+
+/* Mantener el navbar por encima de los snapshots durante una View Transition
+   (la capa de transición ignora el z-index normal) */
+::view-transition-group(navbar) {
+  z-index: 1000;
 }
 
 .navbar.scrolled {
